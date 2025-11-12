@@ -1,0 +1,13 @@
+punish:
+  lift-seconds: 5
+  lift-power: 0.18
+  particle-interval-ticks: 2
+  ban-delay-seconds: 6
+
+checks:
+  attack:
+    max-cps: 20
+    cps-window-ms: 1000
+  reach:
+    max-reach: 4.5
+
