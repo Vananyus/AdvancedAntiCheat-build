@@ -1,37 +1,28 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.yourname</groupId>
+    <artifactId>AntiCheat</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
 
-    <groupId>com.example</groupId>
-    <artifactId>AdvancedAntiCheatPaper</artifactId>
-    <version>1.0.0</version>
-    <packaging>ms</packaging> <!-- Тут ставим ms вместо jar -->
-
-    <name>AdvancedAntiCheatPaper</name>
+    <repositories>
+        <repository>
+            <id>spigotmc</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
-        <!-- Paper API зависит от SNAPSHOT, но для ms это не критично -->
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.16.5-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.2</version>
-                <configuration>
-                    <finalName>AdvancedAntiCheatPaper</finalName>
-                    <classifier></classifier>
-                    <outputDirectory>${project.build.directory}</outputDirectory>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.example.anticheat.AdvancedAntiCheatPaper</mainClass>
-                        </manifest>
-                    </archive>
-                    <finalName>AdvancedAntiCheatPaper.ms</finalName>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
